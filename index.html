@@ -1,52 +1,147 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <title>Anna Solodova's Portfolio</title>
-    <img src="https://media.licdn.com/dms/image/v2/C5603AQGRhKF2GbvSEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1588710514890?e=1759363200&v=beta&t=S3ZDQqZ0dq7Cu63Tprz-5OfoCcvCqDRTacmgesGRerg"
-        alt="Do you like my photo? :-)" width="200" height="200">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background-color: powderblue;
-        }
+      body {
+        background: linear-gradient(135deg, #f8fafc 0%, #c2e9fb 100%);
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
 
-        h1 {
-            color: rgb(255, 5, 142);
-        }
+      h1 {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #ff058e;
+        text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 1px 2px 8px #ffe3f3;
+        margin-top: 32px;
+      }
 
-        p {
-            color: blue;
-        }
+      img[alt] {
+        display: block;
+        margin: 24px auto 12px auto;
+        border-radius: 50%;
+        border: 4px solid #ff058e;
+        box-shadow: 0 4px 16px rgba(255, 5, 142, 0.12);
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      section {
+        background: #e3f2fd;
+        border: 2px solid #0a7cff;
+        border-radius: 12px;
+        margin: 24px auto;
+        padding: 24px;
+        max-width: 700px;
+        box-shadow: 0 2px 8px rgba(10, 124, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #0a7cff;
+        margin-bottom: 12px;
+      }
+
+      p,
+      a {
+        font-size: 1.1rem;
+        color: #000000;
+        margin-bottom: 16px;
+        font-weight: 500;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+
+      li {
+        background: #bbdefb;
+        border-radius: 8px;
+        margin: 8px 0;
+        padding: 12px 18px;
+        color: #0a539f;
+        font-weight: 500;
+        box-shadow: 0 1px 4px rgba(10, 124, 255, 0.07);
+        text-align: center;
+      }
+
+      a[href] {
+        background: #ff058e;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.2s;
+        display: inline-block;
+        margin: 8px;
+      }
+
+      a[href]:hover {
+        background: #0a7cff;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Anna Solodova</h1>
-    <section id="About"></section>
-    <h2>About</h2>
-    <p>This is a paragraph about me. Here's more info about me:</p>
+    <img
+      src="https://media.licdn.com/dms/image/v2/C5603AQGRhKF2GbvSEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1588710514890?e=1759363200&v=beta&t=S3ZDQqZ0dq7Cu63Tprz-5OfoCcvCqDRTacmgesGRerg"
+      alt="Do you like my photo? :-)"
+    />
+
+    <section id="About">
+      <h2>About</h2>
+      <p>This is a paragraph about me. Here's more info about me:</p>
+      <ul>
+        <li>I was born in Russia, but I live in the USA now.</li>
+        <li>I enjoy reading and meeting with the friends.</li>
+        <li>I'm passionate about technology, coding and psychology.</li>
+      </ul>
     </section>
-    <a>I was born in Russia, but I live in the USA now.</a>
+
     <section id="Experience">
-        <h2>Experience</h2>
-        <p>This is a paragraph about my learning experience:</p>
-    </section>
-    <ul>
+      <h2>Experience</h2>
+      <p>This is a paragraph about my learning experience:</p>
+      <ul>
         <li>2025 Code The Dream</li>
         <li>2021 Code In Place</li>
         <li>2019 Microsoft DEV274x: Introduction to Python: Fundamentals</li>
-        <li>2019 Microsoft DEV236x: Introduction to Python: Absolute Beginner</li>
+        <li
+          >2019 Microsoft DEV236x: Introduction to Python: Absolute Beginner</li
+        >
         <li>2019 Microsoft DEV262x: Logic and Computational Thinking</li>
-    </ul>
-    <section id="Connect">
-        <h2>Connect</h2>
-        <p>Let's be friends! The ways to connect with me:</p>
+      </ul>
     </section>
-    <ul>
-        <li><a href="https://github.com/Solodanna/anna-solodova-luna">My Github</a></li>
-        <li><a href="https://www.linkedin.com/in/anna-solodova/">My LinkedIn</a></li>
-    </ul>
-</body>
 
+    <section id="Connect">
+      <h2>Connect</h2>
+      <p>Let's be friends! The ways to connect with me:</p>
+      <a href="https://github.com/Solodanna/anna-solodova-luna">My Github</a>
+      <a href="https://www.linkedin.com/in/anna-solodova/">My LinkedIn</a>
+    </section>
+  </body>
 </html>
