@@ -22,12 +22,11 @@
 
       h1 {
         font-family: "Montserrat", Arial, sans-serif;
-        font-size: 2.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        color: #ff058e;
+        color: #000000;
         text-align: center;
         letter-spacing: 2px;
-        text-shadow: 1px 2px 8px #ffe3f3;
         margin-top: 32px;
       }
 
@@ -35,21 +34,57 @@
         display: block;
         margin: 24px auto 12px auto;
         border-radius: 50%;
-        border: 4px solid #ff058e;
-        box-shadow: 0 4px 16px rgba(255, 5, 142, 0.12);
+        border: 4px solid #ffffff;
+        box-shadow: 0 4px 16px rgba(5, 0, 3, 0.12);
         width: 180px;
         height: 180px;
         object-fit: cover;
       }
 
+      nav {
+        position: sticky;
+        top: 0;
+        background-color: hsl(205, 93%, 18%);
+        z-index: 100;
+        width: 100%;
+        padding: 8px 0;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-button {
+        background: #460027;
+        color: #ffffff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background 0.3s ease, color 0.3s ease;
+        display: inline-block;
+        margin: 4px;
+        border: none;
+      }
+
+      .nav-button:hover {
+        background: #ffffff;
+        color: #460027;
+      }
+
       section {
-        background: #e3f2fd;
-        border: 2px solid #0a7cff;
+        background: #b1cceb;
+        border: 2px solid #b1cceb;
         border-radius: 12px;
         margin: 24px auto;
         padding: 24px;
         max-width: 700px;
-        box-shadow: 0 2px 8px rgba(10, 124, 255, 0.1);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -59,12 +94,11 @@
       h2 {
         font-size: 1.6rem;
         font-weight: 500;
-        color: #0a7cff;
+        color: #ffffff;
         margin-bottom: 12px;
       }
 
-      p,
-      a {
+      p {
         font-size: 1.1rem;
         color: #000000;
         margin-bottom: 16px;
@@ -79,38 +113,67 @@
       }
 
       li {
-        background: #bbdefb;
-        border-radius: 8px;
         margin: 8px 0;
-        padding: 12px 18px;
-        color: #0a539f;
-        font-weight: 500;
-        box-shadow: 0 1px 4px rgba(10, 124, 255, 0.07);
         text-align: center;
       }
 
-      a[href] {
-        background: #ff058e;
-        color: #fff;
-        padding: 8px 16px;
-        border-radius: 6px;
-        text-decoration: none;
-        transition: background 0.2s;
-        display: inline-block;
-        margin: 8px;
+      .experience-list {
+        width: 100%;
       }
 
-      a[href]:hover {
-        background: #0a7cff;
+      .experience-item {
+        margin-bottom: 24px;
+        text-align: left;
+      }
+
+      .experience-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .job-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #0a539f;
+      }
+
+      .job-date {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      .job-description {
+        margin-top: 8px;
+        font-size: 0.95rem;
+        color: #333;
+      }
+
+      .connect-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 10px;
       }
     </style>
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><a href="#About" class="nav-button">About</a></li>
+        <li><a href="#Experience" class="nav-button">Experience</a></li>
+        <li><a href="#Skills" class="nav-button">Skills</a></li>
+        <li><a href="#Projects" class="nav-button">Projects</a></li>
+        <li><a href="#Connect" class="nav-button">Connect</a></li>
+      </ul>
+    </nav>
+
     <h1>Anna Solodova</h1>
     <img
       src="https://media.licdn.com/dms/image/v2/C5603AQGRhKF2GbvSEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1588710514890?e=1759363200&v=beta&t=S3ZDQqZ0dq7Cu63Tprz-5OfoCcvCqDRTacmgesGRerg"
-      alt="Do you like my photo? :-)"
+      alt="Anna Solodova"
     />
 
     <section id="About">
@@ -118,30 +181,69 @@
       <p>This is a paragraph about me. Here's more info about me:</p>
       <ul>
         <li>I was born in Russia, but I live in the USA now.</li>
-        <li>I enjoy reading and meeting with the friends.</li>
-        <li>I'm passionate about technology, coding and psychology.</li>
+        <li>I enjoy reading and meeting with friends.</li>
+        <li>I'm passionate about technology, coding, and psychology.</li>
       </ul>
     </section>
 
     <section id="Experience">
       <h2>Experience</h2>
       <p>This is a paragraph about my learning experience:</p>
+      <div class="experience-list">
+        <div class="experience-item">
+          <div class="experience-row">
+            <h3 class="job-title">Code The Dream</h3>
+            <span class="job-date">2025</span>
+          </div>
+          <p class="job-description">
+            Collaborated on real-world projects with mentorship and peer review.
+          </p>
+        </div>
+        <div class="experience-item">
+          <div class="experience-row">
+            <h3 class="job-title">Code In Place</h3>
+            <span class="job-date">2021</span>
+          </div>
+          <p class="job-description">
+            Completed Stanford-led Python course with hands-on coding
+            challenges.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Skills">
+      <h2>Skills</h2>
       <ul>
-        <li>2025 Code The Dream</li>
-        <li>2021 Code In Place</li>
-        <li>2019 Microsoft DEV274x: Introduction to Python: Fundamentals</li>
-        <li
-          >2019 Microsoft DEV236x: Introduction to Python: Absolute Beginner</li
-        >
-        <li>2019 Microsoft DEV262x: Logic and Computational Thinking</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>HTML & CSS</li>
+        <li>Something new</li>
+      </ul>
+    </section>
+
+    <section id="Projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/Solodanna?tab=repositories"
+            class="nav-button"
+            >My GitHub Projects</a
+          >
+        </li>
       </ul>
     </section>
 
     <section id="Connect">
       <h2>Connect</h2>
       <p>Let's be friends! The ways to connect with me:</p>
-      <a href="https://github.com/Solodanna/anna-solodova-luna">My Github</a>
-      <a href="https://www.linkedin.com/in/anna-solodova/">My LinkedIn</a>
+      <div class="connect-links">
+        <a href="https://github.com/Solodanna" class="nav-button">GitHub</a>
+        <a href="https://www.linkedin.com/in/anna-solodova/" class="nav-button"
+          >LinkedIn</a
+        >
+      </div>
     </section>
   </body>
 </html>
