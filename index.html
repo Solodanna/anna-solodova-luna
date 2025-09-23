@@ -8,17 +8,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
     <nav>
-      <ul>
-        <li><a href="#About" class="nav-button">About</a></li>
-        <li><a href="#Experience" class="nav-button">Experience</a></li>
-        <li><a href="#Skills" class="nav-button">Skills</a></li>
-        <li><a href="#Projects" class="nav-button">Projects</a></li>
-        <li><a href="#Connect" class="nav-button">Connect</a></li>
-      </ul>
+      <div class="nav-container">
+        <button class="burger" aria-label="Toggle navigation"> ☰ </button>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-button">Home</a></li>
+          <li><a href="#" class="nav-button">About</a></li>
+          <li><a href="#" class="nav-button">Projects</a></li>
+          <li><a href="#" class="nav-button">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <h1>Anna Solodova</h1>
@@ -98,3 +101,11 @@
     </section>
   </body>
 </html>
+<script>
+  const burger = document.querySelector(".burger");
+  const navLinks = document.querySelector(".nav-links");
+
+  burger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
