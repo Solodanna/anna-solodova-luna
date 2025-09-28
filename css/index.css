@@ -1,4 +1,8 @@
 /*Used desktop-first layout*/
+html {
+  scroll-behavior: smooth; /* Smooth speed of scrolling */
+  scroll-padding-top: 80px; /* Adjust to match menu height */
+}
 
 body {
   background: linear-gradient(135deg, #f8fafc 0%, #c2e9fb 100%);
@@ -38,6 +42,7 @@ nav {
   position: sticky;
   top: 0;
   background-color: #ffffff;
+  box-shadow: 0 0.25rem 1rem #000000;
   z-index: 100;
   width: 100%;
   padding: 0.5rem 0;
@@ -82,6 +87,7 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 0.25rem 1rem #000000;
 }
 
 h2 {
@@ -155,6 +161,25 @@ li {
   flex-wrap: wrap;
   margin-top: 0.625rem;
 }
+
+/* Flexbox layout for Skills section */
+#Skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+#Skills li {
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+}
+
 /* End of Desktop Version Styles */
 
 /* Tablet Version (768px - 1024px) */
@@ -191,11 +216,21 @@ li {
   .job-description {
     font-size: 0.9rem;
   }
+
+  #Skills ul {
+    justify-content: flex-start;
+  }
+
+  #Skills li {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.75rem;
+  }
 }
 /* End of Tablet Version Styles */
 
 /* Mobile Phones Version (Below 768px) */
 /* Burger button styling */
+
 .burger {
   display: none;
   background: none;
@@ -207,6 +242,10 @@ li {
 
 /* Mobile layout */
 @media (max-width: 767px) {
+  html {
+    scroll-padding-top: 350px; /* Adjust to match menu height */
+  }
+
   .nav-container {
     display: flex;
     justify-content: space-between;
@@ -279,6 +318,17 @@ li {
   .connect-links {
     flex-direction: column;
     align-items: center;
+  }
+
+  #Skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #Skills li {
+    font-size: 0.9rem;
+    width: 80%;
+    text-align: center;
   }
 }
 /* End of Mobile Phones Version Styles */

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <title>Anna Solodova's Portfolio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap"
@@ -16,10 +17,11 @@
       <div class="nav-container">
         <button class="burger" aria-label="Toggle navigation"> ☰ </button>
         <ul class="nav-links">
-          <li><a href="#" class="nav-button">Home</a></li>
-          <li><a href="#" class="nav-button">About</a></li>
-          <li><a href="#" class="nav-button">Projects</a></li>
-          <li><a href="#" class="nav-button">Contact</a></li>
+          <li><a href="#About" class="nav-button">About</a></li>
+          <li><a href="#Experience" class="nav-button">Experience</a></li>
+          <li><a href="#Projects" class="nav-button">Projects</a></li>
+          <li><a href="#Skills" class="nav-button">Skills</a></li>
+          <li><a href="#Connect" class="nav-button">Connect</a></li>
         </ul>
       </div>
     </nav>
@@ -66,16 +68,6 @@
       </div>
     </section>
 
-    <section id="Skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>HTML & CSS</li>
-        <li>Something new</li>
-      </ul>
-    </section>
-
     <section id="Projects">
       <h2>Projects</h2>
       <ul>
@@ -89,6 +81,11 @@
       </ul>
     </section>
 
+    <section id="Skills">
+      <h2>Skills</h2>
+      <ul> </ul>
+    </section>
+
     <section id="Connect">
       <h2>Connect</h2>
       <p>Let's be friends! The ways to connect with me:</p>
@@ -99,13 +96,7 @@
         >
       </div>
     </section>
+    <footer></footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
-<script>
-  const burger = document.querySelector(".burger");
-  const navLinks = document.querySelector(".nav-links");
-
-  burger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
