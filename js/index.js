@@ -30,3 +30,47 @@ const navLinks = document.querySelector(".nav-links");
 burger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+/* 
+  Message Form Submit.
+*/
+// Select messages section globally
+const messageForm = document.getElementById("leave_message");
+const messageSection = document.getElementById("messages");
+const messageList = messageSection.querySelector("ul");
+
+messageSection.style.display = "none"; // Hide initially
+
+// Form submit handler
+messageForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log("Form submitted");
+
+  // Get user input
+  const userName = event.target.userName.value;
+  const userEmail = event.target.userEmail.value;
+  const userMessage = event.target.userMessage.value;
+
+  // Create message entry
+  const newMessage = document.createElement("li");
+  newMessage.innerHTML = `
+    <a href="mailto:${userEmail}">${userName}</a>
+    <span>: ${userMessage}</span>
+  `;
+
+  // Remove button
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+  removeButton.addEventListener("click", function () {
+    const entry = removeButton.parentNode;
+    entry.remove();
+    if (messageList.children.length === 0) {
+      messageSection.style.display = "none";
+    }
+  });
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+  messageSection.style.display = "block"; // Show section when message added
+  messageForm.reset();
+});
