@@ -46,15 +46,20 @@ messageForm.addEventListener("submit", function (event) {
   console.log("Form submitted");
 
   // Get user input
-  const userName = event.target.userName.value;
-  const userEmail = event.target.userEmail.value;
-  const userMessage = event.target.userMessage.value;
+  const usersName = event.target.usersName.value;
+  const usersEmail = event.target.usersEmail.value;
+  const usersMessage = event.target.usersMessage.value;
+  // Log the values to the console
+  console.log("Form submitted");
+  console.log("Name:", usersName);
+  console.log("Email:", usersEmail);
+  console.log("Message:", usersMessage);
 
   // Create message entry
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `
-    <a href="mailto:${userEmail}">${userName}</a>
-    <span>: ${userMessage}</span>
+    <a href="mailto:${usersEmail}">${usersName}</a>
+    <span>: ${usersMessage}</span>
   `;
 
   // Remove button
