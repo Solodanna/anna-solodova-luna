@@ -180,6 +180,31 @@ li {
   color: #000000;
 }
 
+form[name="leave_message"] {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+form[name="leave_message"] label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form[name="leave_message"] input,
+form[name="leave_message"] textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+form[name="leave_message"] button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 /* End of Desktop Version Styles */
 
 /* Tablet Version (768px - 1024px) */
