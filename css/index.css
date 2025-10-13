@@ -162,6 +162,15 @@ li {
   margin-top: 0.625rem;
 }
 
+/* Flexbox layout for Projects */
+.projects-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-top: 0.625rem;
+}
+
 /* Flexbox layout for Skills section */
 #Skills ul {
   display: flex;
