@@ -74,3 +74,32 @@ messageForm.addEventListener("submit", function (event) {
   messageSection.style.display = "block"; // Show section when message added
   messageForm.reset();
 });
+
+const githubUsername = "Solodanna";
+const githubApiUrl = `https://api.github.com/users/${githubUsername}/repos`;
+
+// DOM selection for Projects section
+const projectsSection = document.getElementById("projects");
+const projectsList = projectsSection.querySelector("ul");
+
+// Fetch GitHub repositories
+fetch(githubApiUrl)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    // Parse and store in repositories variable
+    const repositories = data;
+    console.log("Repositories:", repositories);
+
+    // Display each repository name in the list
+    for (let i = 0; i < repositories.length; i++) {
+      const projects = document.createElement("li");
+      projects.innerText = "✔" + repositories[i].name;
+      projectsList.appendChild(projects);
+    }
+  })
+  .catch((error) => {
+    console.error("Error fetching repositories:", error);
+    projectsSection.innerHTML += `<p style="color:red;">Unable to load projects. Please try again later.</p>`;
+  });
